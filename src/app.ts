@@ -6,8 +6,6 @@ import InstagramRoutes from "./routes/instagramWebhookRoutes";
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
-
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
@@ -26,6 +24,4 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log("server running at " + PORT);
-});
+export default app;
