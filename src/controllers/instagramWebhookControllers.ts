@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from "express";
+import "dotenv/config";
 
 export const instagramController = async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -17,5 +18,6 @@ export const instagramController = async (req: Request, res: Response, next: Nex
 }
 
 export const testController = async (req: Request, res: Response, next: NextFunction) => {
+    console.log(process.env.VERIFY_TOKEN);
     res.status(200).send("test");
 }
